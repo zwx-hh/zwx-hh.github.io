@@ -65,7 +65,7 @@
      
     <div class="article-meta">
       <a href="/2020/12/11/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-3%EF%BC%88%E8%8E%B7%E5%8F%96%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/" class="article-date">
-  <time datetime="2020-12-11T14:36:00.105Z" itemprop="datePublished">2020-12-11</time>
+  <time datetime="2020-12-11T14:42:52.315Z" itemprop="datePublished">2020-12-11</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">学习笔记-应用编程与网络编程</a>
@@ -100,7 +100,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>﻿#                                   获取系统信息<br>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
+  <p>﻿#                                   获取系统信息<br>@<a href="%E7%9B%AE%E5%BD%95">TOC</a><br> <a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangwenxiang3774/article/details/110929037">欢迎访问CSDN博文</a></p>
 <h1 id="一、时间"><a href="#一、时间" class="headerlink" title="一、时间"></a>一、时间</h1><h2 id="1、概念"><a href="#1、概念" class="headerlink" title="1、概念"></a>1、概念</h2><p>2020.12.09<br>GMT是格林尼治时间，就是格林尼治地区的时间，作为全球 国际时间，方便描述全球性事件。（起源于天文学）<br>现在越来越多的使用UTC时间（使用原子钟计时）。<br>（1）点时间和短时间（计算机）<br>点时间—一个时刻<br>段时间–一个时间段；段时间=一个点时间 - 一个点时间；<br>（2）定时器和实时时钟<br>定时器（timer）–定的是一个段时间；<br>实时时钟（RTC）–与点时间有关的一个器件。</p>
 <p>（3）Linux系统中的时间<br>**jiffies是Linux内核中的一个全局变量，用来记录以j内核的节拍时间为单位时间长度的一个数值。<br>**内核在开机启动的时候会读取RTC硬件，获取一个时间作为一个基准时间，这个基准时间对应一个jiffies值。（jiffies = 用这个时间 - 1970-01-01 00:00:00，然后再换算）可通过man 2 time 查看。操作系统只在开机时读取一次RTC。<br>一个时间节拍的时间取决于操作系统的配置，Linux一般是10ms或者1ms。也称调度时间，在内核中用Hz来记录和表示的。</p>
 <p>常用的时间相关的API:<br>使用man 2 ……查看<br>time ctime localtime gmtime mktime asctime strftime gettimeofday settimeofday   </p>
