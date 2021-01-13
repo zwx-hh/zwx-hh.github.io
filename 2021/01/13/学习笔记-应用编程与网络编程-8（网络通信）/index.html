@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    学习笔记-应用编程与网络编程 |  Hexo-z
+    学习笔记-应用编程与网络编程-8(网络通信) |  Hexo-z
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -45,230 +45,219 @@
       
     <main class="content on">
       <section class="outer">
-  
-  <article class="articles">
+  <article
+  id="post-学习笔记-应用编程与网络编程-8（网络通信）"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">学习笔记-应用编程与网络编程</h1>
-    
-    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  学习笔记-应用编程与网络编程-8(网络通信)
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/01/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-8%EF%BC%88%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%EF%BC%89/" class="article-date">
+  <time datetime="2021-01-13T08:24:14.748Z" itemprop="datePublished">2021-01-13</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">学习笔记-应用编程与网络编程</a>
+  </div>
   
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2021" class="archive-year">2021</a>
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">956</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">3 分钟</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-    <div class="archives">
       
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/01/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-8%EF%BC%88%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%EF%BC%89/" class="archive-article-date">
-  <time datetime="2021-01-13T08:24:14.748Z" itemprop="datePublished">01/13</time>
-</a>
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/01/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-8%EF%BC%88%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%EF%BC%89/"
-    >学习笔记-应用编程与网络编程-8(网络通信)</a> 
-</h2>
+  <p> <a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangwenxiang3774/article/details/112547728">欢迎访问CSDN博文</a><br>﻿2021.01.12<br>@<a href="%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1">TOC</a></p>
+<h1 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h1><p>1、网络通信最先来源于进程间的通信，实际上就是不同主机的进程间通信。<br>2、方法：网络域套接字socket.<br>3、层次<br>（1）硬件部分：网卡<br>（2）操作系统底层：网卡驱动<br>（3）操作系统API：socket接口<br>（4）应用层：低级（直接基于socket接口编程）<br>（5）应用层：高级（基于网络通信应用框架库）<br>（6）应用层：更高级（http、网络控件等）</p>
+<p>4、发展历程<br>（1）单机阶段<br>（2）局域网阶段（串行口通信）<br>（3）广域网Internet阶段<br>（4）移动互联网阶段<br>（5）物联网阶段</p>
+<p>5、三大网络<br>电信网、电视网络、互联网</p>
+<p>6、网络通信的传输媒介<br>（1）无线传输：WIFI、蓝牙、zigbee、4G/5G/GPRS等<br>（2）有线通信：双绞线、同轴电缆、光纤等</p>
+<p>7、OSI 7层模型</p>
+<p>2021.01.13<br>8、网卡<br>CPU靠网卡来连接外部网络。</p>
+<p>9、集线器（HUB）<br>（1）信号中继放大，相当于中继器<br>（2）组成局域网络，用广播方式工作<br>（3）不能连接外网</p>
+<p>10、交换机<br>（1）包含集线器功能，更高级<br>（2）交换机中有地址表，数据包查表后直达目的通信口而不是广播<br>（3）找不到目的口时广播学习</p>
+<p>11、路由器<br>（1）局域网和外网通信的出入口，路由器将整个internet划分为一个个局域网<br>（2）路由器对内（LAN）管理子网，设置子网的网段，设置优先端口的ip地址，设置dhcp功能。<br>（3）路由器对外（WAN）实现互联网。<br>（4）路由器有两个网卡，一个内网网卡一个外网网卡。<br>（5）路由器的主要功能是为经过路由器的没一个数据包寻找一条最佳路径（路由）并转发出去。<br>（6）决定了网络的稳定性和速度</p>
+<p>12、DNS （Domain Name Service 域名服务）<br>（1）网络世界的门牌号：IP地址<br>（2）IP地址的缺点：难记 不直观<br>（3）IP地址的替代品：域名，例如<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a><br>（4）DNS服务器就是专门提供域名和IP地址之间的转换的服务的，因此域名是需要买的。</p>
+<p>13、DHCP（dynamic host configration protocl,动态主机配置协议）<br>（1）每台计算机都需要一个IP地址，局域网内不能重复<br>（2）IP地址可以是静态的也可以是动态的。<br>（3）动态分配的是局域网内的DHCP服务器来协调。<br>（4）优势：方便接入和断开、有限的ip地址得到充分利用</p>
+<p>14、NAT（network address translation,网络地址转换协议）<br>（1）IP地址分为公网IP（Internet范围内唯一的IP地址）和私网IP（内网IP），局域网内电脑使用的都是私网IP，192.168….<br>（2）当局域网中的主机要发送数据包给外网时，路由器要负责将数据包头中局域网主机的内网IP替换为当前局域网的对外外网IP。这个过程就叫NAT。<br>（3）NAT的作用是缓解IPv4的IP地址不够用问题，最终的解决方案还有要靠IPv6。<br>（4）P2P点对点（也叫NAT穿透技术）</p>
+<p>15、IP地址分类<br>（1）IP地址实际是一个32位二进制构成，使用点分十进制显示<br>（2）IP地址=网络地址+主机地址；网络地址用来表示子网，主机地址用来表示子网中的具体某一台主机的。子网掩码来区分网络地址和主机地址，255表示网络地址，0的表示主机位。<br>（3）网络标识 = IP地址 &amp; 子网掩码，如果网络标识一样，说明两个IP在同一个网段(局域网)</p>
  
-
-    </header>
-    
+      <!-- reward -->
       
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">学习笔记-应用编程与网络编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/01/12/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-7%EF%BC%88%E7%BA%BF%E7%A8%8B+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/" class="archive-article-date">
-  <time datetime="2021-01-12T12:56:40.370Z" itemprop="datePublished">01/12</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/01/12/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-7%EF%BC%88%E7%BA%BF%E7%A8%8B+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/"
-    >学习笔记-应用编程与网络编程-7(线程+附代码)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">学习笔记-应用编程与网络编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/01/07/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-6%EF%BC%88%E9%AB%98%E7%BA%A7IO+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/" class="archive-article-date">
-  <time datetime="2021-01-07T01:43:36.936Z" itemprop="datePublished">01/07</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/01/07/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-6%EF%BC%88%E9%AB%98%E7%BA%A7IO+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/"
-    >学习笔记-应用编程与网络编程-6(高级IO+附代码)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">学习笔记-应用编程与网络编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-  
-  </div>
-  </div>
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2020" class="archive-year">2020</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/12/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-5%EF%BC%88%E4%BF%A1%E5%8F%B7+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/" class="archive-article-date">
-  <time datetime="2020-12-19T08:27:18.998Z" itemprop="datePublished">12/19</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/12/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-5%EF%BC%88%E4%BF%A1%E5%8F%B7+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/"
-    >学习笔记-应用编程与网络编程-5(信号+附代码)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">学习笔记-应用编程与网络编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/12/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-4%EF%BC%88%E8%BF%9B%E7%A8%8B+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/" class="archive-article-date">
-  <time datetime="2020-12-17T13:42:57.694Z" itemprop="datePublished">12/17</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/12/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-4%EF%BC%88%E8%BF%9B%E7%A8%8B+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/"
-    >学习笔记-应用编程与网络编程-4(linux进程)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">学习笔记-应用编程与网络编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/12/11/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-3%EF%BC%88%E8%8E%B7%E5%8F%96%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/" class="archive-article-date">
-  <time datetime="2020-12-11T14:42:52.315Z" itemprop="datePublished">12/11</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/12/11/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-3%EF%BC%88%E8%8E%B7%E5%8F%96%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/"
-    >学习笔记-应用编程与网络编程-3(获取系统信息)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">学习笔记-应用编程与网络编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/12/08/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-2%EF%BC%88%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/" class="archive-article-date">
-  <time datetime="2020-12-08T14:55:46.243Z" itemprop="datePublished">12/08</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/12/08/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-2%EF%BC%88%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/"
-    >学习笔记-应用编程与网络编程-2(文件属性)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">学习笔记-应用编程与网络编程</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
       
     </div>
-  </div>
-  
-  
+    
 
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zwx-hh.github.io/2021/01/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-8%EF%BC%88%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/01/12/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-7%EF%BC%88%E7%BA%BF%E7%A8%8B+%E9%99%84%E4%BB%A3%E7%A0%81%EF%BC%89/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">学习笔记-应用编程与网络编程-7(线程+附代码)</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
   
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -425,6 +414,23 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
